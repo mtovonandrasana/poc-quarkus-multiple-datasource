@@ -38,6 +38,11 @@ class ProductCreationTest {
         Assertions.assertNotNull(savedProduct.getId());
     }
 
+    /**
+     * It failed because {@link Shoe} entity does not have a Panache Repository, or extend
+     * {@link io.quarkus.hibernate.orm.panache.PanacheEntity} or {@link io.quarkus.hibernate.orm.panache.PanacheEntityBase}.
+     * That causes Hibernate panache unable to find related Persistence-unit for Shoe Entity, so it use the default.
+     */
     @Test
     void failedToSaveShoe() {
         var shoe = new Shoe("Puma", "This is a shoe", 19, 42);
