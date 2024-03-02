@@ -13,7 +13,6 @@ dependencies {
     implementation 'io.quarkus:quarkus-jdbc-h2'
     implementation 'io.quarkus:quarkus-hibernate-orm-panache'
     implementation 'io.quarkus:quarkus-arc'
-    implementation 'io.quarkus:quarkus-hibernate-orm'
 
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
